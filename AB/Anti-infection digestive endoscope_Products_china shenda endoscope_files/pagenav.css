@@ -1,0 +1,26 @@
+/**
+ * +---------------------------------------------------------------------------+
+ * 分页样式定义，如无特殊需要，页面制作时只需修改字体颜色
+ * 具体使用方法如下：
+ * <div class="page">
+ *    <div class="page_list">共 10 页 每页 18 条</div>
+ *    <div class="page_info"><< [1] [2] >></div>
+ * </div>
+ * 
+ */
+/*.page {width:98%;margin:10px auto;}*/
+.page {width:100%;margin:10px auto;}
+	/*.page .page_info {height:24px;line-height:26px;float:right;text-align:center;}*/
+    .page .page_info {height:22px;line-height:22px;float:right;text-align:center;border:#cccccc 1px solid;padding:0 6px 0 6px;}
+	.page .page_list_pre {height:24px;float:left;}
+
+	/*.page .page_list {height:26px;float:right;margin-right:20px;}*/
+	.page .page_list {height:26px;float:right;margin-right:10px;}
+		.page .page_list .page_cur_item {float:left;margin:0px 0px 0px 3px;}
+		.page .page_list .page_cur_item A{padding:0px 4px 0px 4px;border:none;color:#FF0000;text-decoration:none;line-height:22px;display: block;}
+		.page .page_list .page_item {float:left;margin-left:3px;}
+			.page .page_list .page_item A{padding:0px 4px 0px 4px;border:#cccccc 1px solid;color:#666666;text-decoration:none;line-height:22px;display: block;}
+			.page .page_list .page_item A:hover {border:#FF6600 1px solid;color:#FF6600}
+/**
+ * +---------------------------------------------------------------------------+
+ */

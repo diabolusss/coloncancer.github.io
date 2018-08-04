@@ -1,0 +1,84 @@
+/**
+ * 参数('view',1,'default','',4)
+ * 名字前缀、位数、CLASSNAME、CLASSNAME2、总数
+ */
+function set_show_(name,i,classname,classname2,count){
+    for (j = 1;j<=count ;j++ )
+    {
+        var divname = name + j;
+        var div_name = name + '_' + j;
+        if (j   == i)
+        {
+            document.getElementById(divname).className = classname;
+            document.getElementById(div_name).style.display = '';
+        } else {
+            document.getElementById(divname).className = classname2;
+            document.getElementById(div_name).style.display = 'none';
+        }
+    }
+}
+
+
+function set_show(name,i,classname,classname2,count) {
+	for (j = 1;j<=count ;j++ )
+    {
+        var divname = name + j;
+        var div_name = name + '_' + j;
+        if (j   == i)
+        {
+            $("#"+divname).attr('class',classname);
+			$("#"+div_name).show();
+        } else {
+            $("#"+divname).attr('class',classname2);
+			$("#"+div_name).hide();
+        }
+    }
+}
+
+
+
+function set_href(name,url){
+    //document.getElementById(name).href = url;
+    $("#"+name).attr('href',url);
+}
+
+/**
+ * non_num_filter 
+ * 屏蔽键盘输入的非数字型字符
+ *
+ *
+ */
+function non_num_filter(e){ 
+	//alert(event.altKey);
+	// 8 退格
+	// 37 - 38 - 39 - 40 上下左右
+	// 45 36 33 Insert Home Pageup
+	// 46 35 34 Delete End Pagedown
+	// 96-105 110
+	// 48-57 190
+
+	var key = event.keyCode;
+	if(
+		(key == 8) || 
+		(key>=33 && key<=40) ||
+		(key>=45 && key<=46) ||
+
+		((key>=48 && key <=57) || key == 46) 
+		||
+		((key>=96 && key <=105) || key == 110)
+	)
+		return true;
+	else
+		return false;
+}
+
+//检查邮箱地址
+function is_email(email) {
+	var emailPat = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;   
+    var matchArray = email.match(emailPat);   
+    if (matchArray == null) {           // 判断是否合法
+        alert("E-mail格式不合法，请重新填写！"); 
+		return false;
+    }
+	return true;
+}

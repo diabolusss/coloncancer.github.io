@@ -1,0 +1,13 @@
+// JavaScript Document
+
+//产品菜单
+$(document).ready(function(){
+	$(".menu li").hover(function(){
+			$(this).addClass("hover");
+			$(this).children("ul li").attr('class','');
+		},function(){
+			$(this).removeClass("hover");  
+			$(this).children("ul li").attr('class','');
+		}
+	); 
+})
