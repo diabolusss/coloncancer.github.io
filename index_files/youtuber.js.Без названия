@@ -70,9 +70,9 @@ function youTuber()
 		$(bg).append($("<div />").attr({ id: 'youTuberLoading'}).text("Загрузка"));
 		$(bg).append($("<div />").attr({ id: 'youTuberClose'}).html("&#215;"));
 		$(bg).append($("<div />").attr({ id: 'youTuberContainer' }));
-
-
-		$("#youTuberContainer").append($("<iframe />").attr({ src: '//web.archive.org/web/20180114220111/http://youtube.com/embed/'+id, frameborder: 0, id: 'youTuber', "allowfullscreen": "" }));
+//not acessible anymore
+////web.archive.org/web/20180114220111/
+		$("#youTuberContainer").append($("<iframe />").attr({ src: 'http://youtube.com/embed/'+id, frameborder: 0, id: 'youTuber', "allowfullscreen": "" }));
 		video = $("#youTuberContainer");
 		sizeVideo();
 		$(video).fadeIn("fast");
