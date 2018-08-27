@@ -5,7 +5,7 @@ $(document).ready(function()
 
 function youTuber() 
 {
-	$("head").append($("<link>").attr({ type: 'text/css', rel: 'stylesheet', href: 'youtuber/youtuber.css' })); // css
+	$("head").append($("<link>").attr({ type: 'text/css', rel: 'stylesheet', href: 'youtuber.css' })); // css
 	$("body").append($("<div>").attr({ class: 'youtuberBack' })); // bg
 	$(".youTuberBack").height($(document).height());
 
